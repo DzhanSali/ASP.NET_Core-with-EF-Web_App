@@ -1,0 +1,44 @@
+﻿@model Web2Project.ViewModels.Home.LoginVM
+@using Web2Project.Entities;
+@{
+    this.Layout = "/Views/_Site.cshtml";
+    ViewData["title"] = "Login";
+}
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/css/LoginNo1.css" />
+</head>
+
+<body>
+<div style="margin-top:40px">
+
+    <div style="justify-content:center; display:flex">
+        <div>
+            @*//place image here*@
+        </div>
+        <form title="LOGIN" action="/Home/Login" method="post" class="loginForm">
+            <div class="loginDivs">
+                    <label for="Username" style="color:#aaffff;">
+                    @Html.LabelFor(n => n.Username)
+                </label>
+                <input type="text" name="Username" class="inputUP"><br>
+            </div>
+            <div class="loginDivs">
+                    <label for="Password" style="color:#aaffff;">
+                    @Html.LabelFor(n => n.Password)
+                </label>
+                <input type="password" name="Password" class="inputUP">
+            </div>
+            <div>
+                    <label for="remember-me" style="margin-left:7px; margin-top:3px; color:#aaffff;">Remember me</label>
+                    <input type="checkbox" value="remember-me" style="position:absolute;"><br>
+
+            </div><br>
+            <div style="display: flex;justify-content: center;">
+                <button class="loginButton" type="submit">Sign in</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>

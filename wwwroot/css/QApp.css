@@ -1,0 +1,17 @@
+﻿.select {
+    color: #1a5032;
+    width: 305px;
+    height: 25px;
+    border-color: #48d1cc;
+    outline-color: seagreen;
+}
+
+.chkbox {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.checkholder {
+    display: grid;
+    justify-content: space-evenly;
+}

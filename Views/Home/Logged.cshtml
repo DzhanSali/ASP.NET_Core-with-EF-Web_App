@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["title"] = "Logged";
+    Layout = "/Views/_Site.cshtml";
+}
+<form action="/Home/Login" method="post">
+    <div class="grid">
+        <div class="row">
+            <div class="col-1">
+                Username:
+            </div>
+            <div class="col-2">
+                <input type="text" name="username" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                Password:
+            </div>
+            <div class="col-2">
+                <input type="password" name="password" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <input class="right" type="submit" value="Login" />
+            </div>
+        </div>
+    </div>
+</form>

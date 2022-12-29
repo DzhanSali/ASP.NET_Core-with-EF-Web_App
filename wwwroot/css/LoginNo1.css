@@ -1,0 +1,26 @@
+﻿.loginForm {
+    display: grid;
+    justify-content: center;
+    background-color: #339a60;
+    border: solid;
+    border-color: #1a5032;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 30px;
+}
+
+.loginDivs {
+    display: grid;
+}
+
+.inputUP {
+    width: 300px;
+    height: 25px;
+    border-radius: 4px;
+    border-color: #48d1cc;
+   outline-color: seagreen;
+}
+
+.loginButton {
+    color: #1a5032;
+}

@@ -1,0 +1,25 @@
+﻿@model Web2Project.ViewModels.Users.IndexVM
+@using Web2Project.Entities
+@{
+    this.Layout = "/Views/Shared/_Site.cshtml";
+    ViewData["title"] = "USERS";
+}
+
+
+<div class="grid">
+    <div class="row">
+        <div class="col-1">Username:</div>
+        <div class="col-2">First Name:</div>
+        <div class="col-2">Last Name:</div>
+        <div class="col-2"></div>
+    </div>
+    @foreach(GeneralUser item in Model.Items)
+    {
+        <div class="row">
+            <div class="col-1">@item.Username</div>
+            <div class="col-2">@item.FirstName</div>
+            <div class="col-2">@item.LastName</div>
+            <div class="col-2"></div>
+        </div>
+    }
+</div>

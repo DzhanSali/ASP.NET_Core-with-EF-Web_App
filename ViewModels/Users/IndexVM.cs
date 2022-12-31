@@ -6,6 +6,5 @@ namespace Web2Project.ViewModels.Users
     public class IndexVM
     {
         public List<GeneralUser> Items { get; set; }
-       /// public List<Skills> SkillList { get; set; }
     }
 }

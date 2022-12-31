@@ -21,8 +21,6 @@ namespace Web2Project.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            //CreateVM model = new CreateVM();
-            //return View(model);
             return View();
         }
 
@@ -33,7 +31,7 @@ namespace Web2Project.Controllers
 
             if (ModelState.IsValid)
             {
-                using (DatabaseContext dc = new DatabaseContext())
+                using (DatabaseContext context = new DatabaseContext())
                 {
                     GeneralUser item = new GeneralUser();
                     item.Username = model.Username;
@@ -43,26 +41,12 @@ namespace Web2Project.Controllers
                     item.EmailAddress = model.EmailAddress;
                     item.PhoneNumber = model.PhoneNumber;
 
-                    //Skills skills = new Skills();
-                    //skills.SkillName = model.SkillName;
-
-
-                    DatabaseContext context = new DatabaseContext();
-                    context.Users.Add(item);
-                    dc.Users.Add(item);
-                    //context.SkillSet.Add(skills);
+                    context.Users.Add(item);  
                     context.SaveChanges();
-                    dc.SaveChanges();
-
-
-                    context.SaveChangesAsync();
-                    context.Add<GeneralUser>(item);
-                    context.Add<CreateVM>(model);
-                    context.Update(context);
                 }
             }
 
-            return RedirectToAction("Index", "Users");
+            return RedirectToAction("Create", "Users");
         }
 
 
@@ -77,7 +61,7 @@ namespace Web2Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (DatabaseContext dc = new DatabaseContext())
+                using (DatabaseContext context = new DatabaseContext())
                 {
                     GeneralUser gu = new GeneralUser();
                     gu.FirstName = mod.FirstName;
@@ -91,21 +75,15 @@ namespace Web2Project.Controllers
                     Jobs jb = new Jobs(); 
                     jb.JobName = mod.JobName;
 
-
-                    DatabaseContext context = new DatabaseContext();
                     context.Users.Add(gu);
-                    dc.Users.Add(gu);
 
                     context.SkillSet.Add(skills);
-                    dc.SkillSet.Add(skills);
 
                     context.Job.Add(jb);
-                    dc.Job.Add(jb);
                     
                     context.SaveChanges();
-                    dc.SaveChanges();
 
-                    return RedirectToAction("Index", "Users");
+                    return RedirectToAction("QuickApplication", "Users");
                 }
             }
             else { return View(mod); }

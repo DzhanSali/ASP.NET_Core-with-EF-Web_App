@@ -12,7 +12,6 @@ namespace Web2Project.Repositories
 
         public DatabaseContext()
         {
-            //this.users ????
             Users = this.Set<GeneralUser>();
             SkillSet = this.Set<Skills>();
             Job = this.Set<Jobs>();

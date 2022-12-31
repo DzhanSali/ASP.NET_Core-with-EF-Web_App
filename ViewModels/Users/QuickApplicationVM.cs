@@ -22,6 +22,5 @@ namespace Web2Project.ViewModels.Users
         
         [Required(ErrorMessage = "This Field Is Required!")]
         public string JobName { get; set; }
-        //list with skills. for each skill a new value is stored in the list
     }
 }

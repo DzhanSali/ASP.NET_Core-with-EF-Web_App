@@ -8,15 +8,14 @@
 <head>
     <link rel="stylesheet" href="/css/UserViewExp.css" />
     <link rel="stylesheet" href="/css/LoginNo1.css" />
-    <link rel="stylesheet" href="/css/QApp.css"/>
+    <link rel="stylesheet" href="/css/QApp.css" />
 </head>
 
 <body>
-  
+
     <div style="display:grid" class="registerDiv">
-   //form action users/createVM  ??
-        <form action="/Users/Create" method="post" class="loginForm">
-            
+        <form action="/Users/QuickApplication" method="post" class="loginForm">
+
             <div class="grid">
 
                 <div class="loginDivs">
@@ -48,44 +47,45 @@
                 </div>
 
                 <div class="loginDivs">
-                <label for="JobName" style="color:#aaffff;">Select a job to apply for:</label>
-                <select name="JobName" class="select">
-                    <option value="MetaLand">MetaLand</option>
-                    <option value="SoftServe">SoftServe</option>
-                    <option value="StackSlave">StackSlave</option>
-                    <option value="CyberFolk">CyberFolk</option>
-                    <option value="TechNo">TechNo</option>
-                    <option value="WebDe">WebDe</option>
-                </select>
+                    <label asp-for="JobName" style="color:#aaffff;">Select a job to apply for:</label>
+                    <select name="JobName" asp-for="JobName" class="select">
+                        <option value="">Choose A Company</option>
+                        <option value="MetaLand">MetaLand</option>
+                        <option value="SoftServe">SoftServe</option>
+                        <option value="StackSlave">StackSlave</option>
+                        <option value="CyberFolk">CyberFolk</option>
+                        <option value="TechNo">TechNo</option>
+                        <option value="WebDe">WebDe</option>
+                    </select>
                 </div><br>
 
                 <div class="checkholder">
-                <div class="chkbox">
-                    <input type="checkbox" name="SkillName" value="CSS">
-                    <label for="SkillName" style="color:#aaffff;"> CSS  </label>
+                    <div class="chkbox">
+                        <input type="checkbox" asp-for="SkillName" value="CSS">
+                        <label asp-for="SkillName" style="color:#aaffff;"> CSS  </label>
 
-                    <input type="checkbox" name="SkillName" value="Java">
-                    <label for="SkillName" style="color:#aaffff;"> Java </label>
+                        <input type="checkbox" asp-for="SkillName" value="Java">
+                        <label asp-for="SkillName" style="color:#aaffff;"> Java </label>
 
-                        <input type="checkbox" name="SkillName" value="JS">
-                        <label for="SkillName" style="color:#aaffff;"> JS </label>
+                        <input type="checkbox" asp-for="SkillName" value="JavaScript">
+                        <label asp-for="SkillName" style="color:#aaffff;"> JS </label>
 
-                    <input type="checkbox" name="SkillName" value="Python">
-                    <label for="SkillName" style="color:#aaffff;"> Python </label>
-                </div>
-                <div class="chkbox">
-                        <input type="checkbox" name="SkillName" value="C++">
-                    <label for="SkillName" style="color:#aaffff;"> C++ </label>
+                        <input type="checkbox" asp-for="SkillName" value="Python">
+                        <label asp-for="SkillName" style="color:#aaffff;"> Python </label>
+                    </div>
+                    <div class="chkbox">
+                        <input type="checkbox" asp-for="SkillName" value="C++">
+                        <label asp-for="SkillName" style="color:#aaffff;"> C++ </label>
 
-                        <input type="checkbox" name="SkillName" value="HTML">
-                    <label for="SkillName" style="color:#aaffff;"> HTML </label>
+                        <input type="checkbox" asp-for="SkillName" value="HTML">
+                        <label asp-for="SkillName" style="color:#aaffff;"> HTML </label>
 
-                        <input type="checkbox" name="SkillName" value="C#">
-                    <label for="SkillName" style="color:#aaffff;"> C# </label>
+                        <input type="checkbox" asp-for="SkillName" value="C#">
+                        <label asp-for="SkillName" style="color:#aaffff;"> C# </label>
 
-                    <input type="checkbox" name="SkillName" value="Swift">
-                    <label for="SkillName" style="color:#aaffff;"> Swift </label>
-                </div><br>
+                        <input type="checkbox" asp-for="SkillName" value="SQL">
+                        <label asp-for="SkillName" style="color:#aaffff;"> SQL </label>
+                    </div><br>
                 </div>
 
                 <div class="row">
